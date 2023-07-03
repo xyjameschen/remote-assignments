@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .full_page {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 5px;
+            background-color: rgb(180, 180, 180);
+        }
+
+        .title_box {
+            display: flex;
+            justify-content: left;
+
+        }
+
+        .item_box {
+            display: flex;
+            justify-content: right;
+        }
+
+        .title,
+        .item {
+            margin: 0 12px;
+        }
+
+        header {
+            background-color: rgb(165, 231, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header div {
+            margin: 50px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .section_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section_title div {
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .big_box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contain_box {
+            display: flex;
+            flex-wrap: wrap;
+            width: 800px;
+        }
+
+        .box {
+            width: 380px;
+            text-align: center;
+            background-color: #4c6c9a;
+            height: 100px;
+            margin: 10px
+        }
+
+        .call_box{
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 ;
+        }
+        .call{
+            background-color: #65d8fb;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full_page">
+        <nav>
+            <div class="title_box">
+                <div class="title">Web Title/Logo</div>
+            </div>
+            <div class="item_box">
+                <div class="item">item 1</div>
+                <div class="item">item 2</div>
+                <div class="item">item 3</div>
+                <div class="item">item 4</div>
+            </div>
+        </nav>
+        <header>
+            <div>Welcome Message</div>
+        </header>
+        <div class="section_title">
+            <div>
+                Section Title
+            </div>
+        </div>
+        <div class="big_box">
+            <div class="contain_box">
+                <div class="box">Content Box 1</div>
+                <div class="box">Content Box 2</div>
+                <div class="box">Content Box 3</div>
+                <div class="box">Content Box 4</div>
+            </div>
+        </div>
+        <div class="call_box">
+            <div class="call">Call in Action</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
