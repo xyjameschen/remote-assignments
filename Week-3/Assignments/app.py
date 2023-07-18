@@ -28,7 +28,7 @@ def data():
             return str(results)
 
 
-@app.route('/sum')
+@app.route('/sum.html')
 def sum():
     return render_template("sum.html")
 
