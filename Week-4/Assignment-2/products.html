@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Information</title>
+</head>
+
+<body>
+
+  <div id="product-info"></div>
+
+  <script>
+    function ajax(src, callback) {
+      // make ajax call to the URL
+      fetch(src)
+        .then(response => response.json())
+        .then(data => callback(data))
+        .catch(error => {
+          console.error('Error: ', error);
+          callback([]);
+        });
+    }
+
+    function render(data) {
+      var container = document.getElementById('product-info');
+
+      container.innerHTML = '';
+
+      // append elements
+      data.forEach(product => {
+        var productDiv = document.createElement('div');
+        var nameElement = document.createElement('h2');
+        var description = document.createElement('p');
+        var price = document.createElement('p');
+
+        nameElement.textContent = product.name;
+        description.textContent = product.description;
+        price.textContent = '$' + product.price;
+
+        productDiv.appendChild(nameElement);
+        productDiv.appendChild(description);
+        productDiv.appendChild(price);
+
+        container.appendChild(productDiv);
+      });
+    }
+
+    ajax("https://remote-assignment.s3.ap-northeast-1.amazonaws.com/products",
+    function(response) {
+      render(response);
+    });
+  </script>
+
+</body>
+</html>
